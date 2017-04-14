@@ -94,11 +94,11 @@
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
-    <parameter key="secret">f540a270af436c96f950274591161e90bc8a7ba0</parameter>
+    <parameter key="secret">mytoken</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
-    <parameter key="kernel.secret">f540a270af436c96f950274591161e90bc8a7ba0</parameter>
+    <parameter key="kernel.secret">mytoken</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
     <parameter key="kernel.trusted_proxies" type="collection"/>
@@ -455,7 +455,7 @@
                 <tag name="cache.pool" clearer="cache.default_clearer"/>
                 <argument>yvZtIhqL1V</argument>
                 <argument>0</argument>
-                <argument>BCBXCJ2aKOjOQhVyM-GrfI</argument>
+                <argument>VJ-+cAlXwqQkSteo-5z+Kr</argument>
                 <argument>/home/gru/nik-symfony-projects/meetlog/var/cache/dev/pools</argument>
                 <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                 <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -541,7 +541,7 @@
       <argument>/home/gru/nik-symfony-projects/meetlog/app/Resources</argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
-      <argument>f540a270af436c96f950274591161e90bc8a7ba0</argument>
+      <argument>mytoken</argument>
     </service>
     <service id="config_cache_factory" class="Symfony\Component\Config\ResourceCheckerConfigCacheFactory">
       <argument type="collection">
@@ -638,7 +638,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>GWNr896gEO</argument>
       <argument>0</argument>
-      <argument>BCBXCJ2aKOjOQhVyM-GrfI</argument>
+      <argument>VJ-+cAlXwqQkSteo-5z+Kr</argument>
       <argument>/home/gru/nik-symfony-projects/meetlog/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -648,7 +648,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>L91Ys0ByGc</argument>
       <argument>0</argument>
-      <argument>BCBXCJ2aKOjOQhVyM-GrfI</argument>
+      <argument>VJ-+cAlXwqQkSteo-5z+Kr</argument>
       <argument>/home/gru/nik-symfony-projects/meetlog/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1641,7 +1641,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58ee4cf0232f44.51827551</argument>
+            <argument>58f08fad776ac7.90886400</argument>
           </service>
         </argument>
       </argument>
@@ -1789,7 +1789,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58ee4cf0232f44.51827551</argument>
+            <argument>58f08fad776ac7.90886400</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

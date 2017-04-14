@@ -1,4 +1,0 @@
-[2017-04-12 16:51:25] php.DEBUG: Warning: fsockopen(): unable to connect to 127.0.0.1:8000 (Connection refused) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\SilencedErrorContext: {\"severity\":2,\"file\":\"/home/gru/nik-symfony-projects/meetlog/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Command/ServerCommand.php\",\"line\":61})"} []
-[2017-04-12 16:52:56] request.INFO: Matched route "homepage". {"route":"homepage","route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost:8000/","method":"GET"} []
-[2017-04-12 16:52:56] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
-[2017-04-12 16:52:57] request.INFO: Matched route "_wdt". {"route":"_wdt","route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"408ca6","_route":"_wdt"},"request_uri":"http://localhost:8000/_wdt/408ca6","method":"GET"} []
