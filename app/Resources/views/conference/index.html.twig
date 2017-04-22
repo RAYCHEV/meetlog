@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Conferences list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Createon</th>
+                <th>Mustvisit</th>
+                <th>Venueid</th>
+                <th>Lectureid</th>
+                <th>Breakid</th>
+                <th>Userid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conference in conferences %}
+            <tr>
+                <td><a href="{{ path('conference_show', { 'id': conference.id }) }}">{{ conference.id }}</a></td>
+                <td>{{ conference.title }}</td>
+                <td>{{ conference.description }}</td>
+                <td>{% if conference.createOn %}{{ conference.createOn|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if conference.mustVisit %}Yes{% else %}No{% endif %}</td>
+                <td>{{ conference.venueId }}</td>
+                <td>{{ conference.lectureId }}</td>
+                <td>{{ conference.breakId }}</td>
+                <td>{{ conference.userId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('conference_show', { 'id': conference.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('conference_edit', { 'id': conference.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('conference_new') }}">Create a new conference</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,6 +1,6 @@
 <?php
 
-namespace ConferenceBundle\Repository;
+namespace AppBundle\Repository;
 
 /**
  * ConferenceRepository

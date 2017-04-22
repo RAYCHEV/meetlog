@@ -1,6 +1,6 @@
 <?php
 
-namespace ConferenceBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Conference
  *
  * @ORM\Table(name="conference")
- * @ORM\Entity(repositoryClass="ConferenceBundle\Repository\ConferenceRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ConferenceRepository")
  */
 class Conference
 {
@@ -66,7 +66,7 @@ class Conference
     /**
      * @var int
      *
-     * @ORM\Column(name="break_id", type="integer")
+     * @ORM\Column(name="break_id", type="integer", nullable=true)
      */
     private $breakId;
 
