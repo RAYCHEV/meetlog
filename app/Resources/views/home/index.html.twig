@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+Logout
+    
+{% else %}
+<a href="{{ path('our_login') }}">Login</a> <br>
+<a href="{{ path('user_register_form') }}">Register</a>
+{#<a href="{{ path('conference_show') }}">all conferences</a>#}
+{% endif %}
+{% endblock %}
