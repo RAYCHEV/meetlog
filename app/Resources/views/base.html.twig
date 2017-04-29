@@ -7,6 +7,21 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% block menu %}
+            <a href="{{ path('home') }}">Home</a>
+            <a href="{{ path('conference_index') }}">Show</a>
+            <a href="{{ path('conference_new') }}">Create</a>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                Logout
+
+            {% else %}
+                <a href="{{ path('our_login') }}">Login</a> or
+                <a href="{{ path('user_register_form') }}">Register</a>
+                {#<a href="{{ path('conference_show') }}">all conferences</a>#}
+            {% endif %}
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
