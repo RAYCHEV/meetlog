@@ -2,8 +2,28 @@
 
 {% block body %}
     {{ form_start(register_form) }}
-    {{ form_widget(register_form) }}
-    <button type="submit">Register!</button>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td>
+            {{ form_row(register_form.username) }}
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                {{ form_row(register_form.password) }}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                {{ form_widget(register_form) }}
+                <button type="submit">register</button>
+            </td>
+        </tr>
+    </table>
     {{ form_end(register_form) }}
+    
 {% endblock %}
 

@@ -51,7 +51,7 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute("homepage");
+            return $this->redirectToRoute("home");
         }
 
         return $this->render('user/register.html.twig',

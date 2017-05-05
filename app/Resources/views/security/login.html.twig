@@ -1,8 +1,17 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <form method="post">
-    Username:<input type="text" name="_username"><br>
-    Password:<input type="text" name="_password"><br>
-    <input type="submit" value="Login!">
+    <table>
+        <tr>
+            <td>Username:</td><td><input type="text" name="_username">
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td><td><input type="text" name="_password"></td>
+        </tr>
+        <tr>
+            <td></td><td><input type="submit" value="Login!"></td>
+        </tr>
+    </table>
 </form>
 {% endblock body %}
