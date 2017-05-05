@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
-class homeController extends Controller
+class HomeController extends Controller
 {
     /**
      * @Route("/", name="home")
@@ -16,5 +16,14 @@ class homeController extends Controller
     public function indexAction()
     {
         return $this->render("home/index.html.twig");
+    }
+
+    /**
+     * @Route("\bootstrap", name="bootstrap")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showBootsrtapOptions()
+    {
+        return $this->render("home/bootstrap.html.twig");
     }
 }

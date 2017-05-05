@@ -15,7 +15,13 @@
                 {{ form_row(register_form.password) }}
             </td>
         </tr>
-        <tr>
+        {#<tr>#}
+            {#<td>Repeat pass</td>#}
+            {#<td>#}
+                {#{{ form_row(register_form.repeatPass) }}#}
+            {#</td>#}
+        {#</tr>#}
+        {#<tr>#}
             <td></td>
             <td>
                 {{ form_widget(register_form) }}
@@ -24,6 +30,6 @@
         </tr>
     </table>
     {{ form_end(register_form) }}
-    
+
 {% endblock %}
 

@@ -3,12 +3,11 @@
 {% block body %}
     <h1>Users list</h1>
 
-    <table>
+    <table class="table table-responsive">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Username</th>
-                <th>Password</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -17,25 +16,16 @@
             <tr>
                 <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
                 <td>{{ user.username }}</td>
-                <td>{{ user.password }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a class="btn btn-default" href="{{ path('user_show', { 'id': user.id }) }}">show </a>
+                    <a class="btn btn-warning" href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('user_new') }}">Create a new user</a>
-        </li>
-    </ul>
+        <a class="btn bg-success" href="{{ path('user_new') }}">
+            Create a new user
+        </a>
 {% endblock %}
